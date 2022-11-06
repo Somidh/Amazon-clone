@@ -47,6 +47,15 @@ const Home = () => {
                     image={"https://m.media-amazon.com/images/I/61sDyXAepuL._SL1500_.jpg"}
                 />
             </div>
+            <div>
+                <Product
+                    id="1234"
+                    title="Apple iPhone 13 Pro (128GB) - Gold"
+                    price={11.96}
+                    rating={5}
+                    image={"https://m.media-amazon.com/images/I/61sDyXAepuL._SL1500_.jpg"}
+                />
+            </div>
         </div>
     )
 }
