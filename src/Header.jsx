@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useStateValue } from './StateProvider';
 
 const NavLink = ({ first, second }) => {
     return (<Link className='text-[white] no-underline' to="/login">
@@ -13,11 +14,14 @@ const NavLink = ({ first, second }) => {
 }
 
 const Header = () => {
+
+    const [{cart}] = useStateValue()
+    
     return (
         <div>
             <nav className='bg-[#131921] flex items-center sticky top-0 z-100'>
-                <Link>
-                    <img className='mx-5 pt-[18px] w-[100px] object-contain' src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="" />
+                <Link to='/'>
+                    <img  className='mx-5 pt-[18px] w-[100px] object-contain' src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="" />
                 </Link>
 
                 <div className='flex flex-1'>
@@ -43,7 +47,7 @@ const Header = () => {
                     <Link to="/checkout" className='text-[white] no-underline'>
                         <div className='flex item-center'>
                             <ShoppingCartIcon />
-                            <span>0</span>
+                            <span>{cart?.length}</span>
                         </div>
                     </Link>
                 </div>

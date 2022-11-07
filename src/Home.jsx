@@ -1,3 +1,4 @@
+import { nanoid } from 'nanoid'
 import React from 'react'
 import Product from './Product'
 
@@ -9,18 +10,18 @@ const Home = () => {
 
             <div className='flex z-10 mx-[5px]' >
                 <Product
-                    id="1234"
+                    id={nanoid()}
                     title="Apple iPhone 13 Pro (128GB) - Gold"
                     price={11.96}
                     rating={5}
                     image={"https://m.media-amazon.com/images/I/61sDyXAepuL._SL1500_.jpg"}
                 />
                 <Product
-                    id="1234"
-                    title="Apple iPhone 13 Pro (128GB) - Gold"
+                    id={nanoid()}
+                    title="Noise Air Buds+ Truly Wireless Earbuds with Instacharge & Hypersync Technology, Silicone tip, Superb Calling & 20 Hour Playtime - Pearl White"
                     price={11.96}
                     rating={5}
-                    image={"https://m.media-amazon.com/images/I/61sDyXAepuL._SL1500_.jpg"}
+                    image={"https://m.media-amazon.com/images/I/512hYGWmsFL._SL1500_.jpg"}
                 />
             </div>
 
