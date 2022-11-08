@@ -1,23 +1,22 @@
 export const initialState = {
-    cart: [
-        {
-            id: "1234",
-            title: "Apple iPhone 13 Pro (128GB) - Gold",
-            price: 11.96,
-            rating: 5,
-            image: "https://m.media-amazon.com/images/I/61sDyXAepuL._SL1500_.jpg"
-        }
-    ],
+    cart: [],
     user: null
 }
 
-export const getCartTotal = (cart) => {
-    cart?.reduce((amount, item) => item.price + amount, 0)
-}
+export const getCartTotal = (cart) => (
+     cart?.reduce((amount, item) => item.price + amount, 0)
+)
+
 
 
 const reducer = (state, action) => {
     switch (action.type) {
+
+        case "SET_USER" :
+            return {
+                ...state,
+                user: action.user
+            }
         case "ADD_TO_CART":
             return {
                 ...state,

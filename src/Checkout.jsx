@@ -8,7 +8,7 @@ function Checkout() {
     const [{ cart }] = useStateValue()
 
     return (
-        <div className='flex p-[20px] bg-[white] '>
+        <div className='flex p-[20px] bg-[rgb(234,237,237)] mt-10  '>
             <div >
 
                 <img className='w-full mb-[10px]' src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg" alt="" />
@@ -20,7 +20,12 @@ function Checkout() {
                     </div>
                 ) : (
                     <div>
-                        <h2>Your shopping cart</h2>
+                        <div className=" flex items-end justify-between">
+                            <h2 className="font-medium text-3xl ml-32" >Your shopping cart</h2>
+                            <small className='mr-40'>Price</small>
+                        </div>
+
+                        <hr className="text-2xl text-black border-0 h-[1px] bg-[rgba(0,0,0,.2)] w-[52em] mx-auto my-5" />
 
                         {cart.map(item => (
                             <CheckoutProduct
